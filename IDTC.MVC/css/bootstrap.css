@@ -274,9 +274,9 @@ html {
 }
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.42857143;
-  color: #777777;
+  color: #333333;
   background-color: #ffffff;
 }
 input,
@@ -565,7 +565,6 @@ a.bg-danger:hover {
 .page-header {
   padding-bottom: 9.5px;
   margin: 42px 0 21px;
-  border-bottom: 1px solid #eeeeee;
 }
 ul,
 ol {
@@ -3824,6 +3823,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-nav.navbar-right:last-child {
     margin-right: -15px;
+    padding-top: 6px;
   }
 }
 @media (min-width: 768px) {

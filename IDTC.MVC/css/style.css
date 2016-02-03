@@ -1,0 +1,58 @@
+﻿.wwa{
+	margin-top: 8px;
+	text-align: center;
+}
+.wwa h3{
+	color:#2f2f2f;
+}
+.wwa h4{
+	margin-top: 15px;
+	color:#2f2f2f;
+}
+/**/
+.team{
+	text-align:center;
+	margin-top: 46px;
+}
+.team .b1{
+	padding-left:0;
+}
+.team .b3{
+	padding-right:0;
+}
+.team img{
+	margin:0 auto;
+}
+.team h4{
+	color:#2f2f2f;
+}
+.team h5{
+	margin-top: -3px;
+	color:#a9a9a9;
+}
+.team p{
+	margin-top: 12px;
+	color: #666;
+	line-height: 24px;
+
+}
+.team ul{
+	margin-top: 2px;
+    padding-bottom: 20px;
+	padding-left:0px;
+	display: inline-block;
+	margin:0 auto;
+}
+.team ul li{
+	padding:0 10px;
+	float:left;
+	list-style:none;
+	font-family: FontAwesome;
+	font-size:15px;
+}
+.team ul li a{
+	color:#2f2f2f;
+}
+.team ul li a:hover{
+	color:#1fcdff;
+}

@@ -12,5 +12,10 @@ namespace IDTC.MVC.Controllers
         {
             return View();
         }
+        
+        public ActionResult TwoColumn()
+        {
+            return View();
+        }
     }
 }

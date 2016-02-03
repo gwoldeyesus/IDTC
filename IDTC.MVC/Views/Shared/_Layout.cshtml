@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Modern Business - @ViewBag.Title</title>
+    <title>I Do This For Change - @ViewBag.Title</title>
 
     <!-- Bootstrap -->
     <link href="@Url.Content("/css/bootstrap.css")" rel="stylesheet">
+    <link href="@Url.Content("/css/style.css")" rel="stylesheet">
     <link href="@Url.Content("/css/modern-business.css")" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -26,55 +28,74 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
-                @Html.ActionLink("I Do This for Change", "Index", new { controller = "Home" }, new { @class = "navbar-brand" })
+                @*@Html.ActionLink("This I Do for Change", "Index", new { controller = "Home" }, new { @class = "navbar-brand" })*@
+                <a href='@Url.Action("Index", "Home")'>
+                    <img src='@Url.Content("~/Images/Logo.png")' width="136" height="79" />
+                </a>
+                @*<img src="~/Images/Logo.png" />*@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li id="about">
-                       @Html.ActionLink("About", "Index", "About")
-                    </li>
-                    <li id="services">
-                        @Html.ActionLink("Services", "Index", "Services")
-                    </li>
-                    <li id="contact">
-                        @Html.ActionLink("Contact", "Index", "Contact")
-                    </li>
-                    <li id="portfolio" class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+                    <li id="about" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li id="1columnportfolio">
-                                @Html.ActionLink("1 Column Portfolio", "OneColumn", "Portfolio")
+                            <li id="AboutUs">
+                                @Html.ActionLink("Who Are We?", "WhoAreWe", "AboutUs")
                             </li>
-                            
-                            
-                            
-                            
-                        </ul>
-                    </li>
-                    <li id="blog" class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li id="bloghome1">
-                                @Html.ActionLink("Blog Home 1", "Home1", "Blog")
+                            <li id="AboutUs">
+                                @Html.ActionLink("History", "History", "AboutUs")
                             </li>
-                            
-                            
-                        </ul>
-                    </li>
-                    <li id="other" class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li id="fullwidthpage">
-                                @Html.ActionLink("Full Width Page", "FullWidth", "Other")
+                            <li id="Credit">
+                                @Html.ActionLink("Credits", "Credits", "AboutUs")
                             </li>
-                            
+                            <li id="bod">
+                                @Html.ActionLink("Board of Directors", "BoardofDirectors", "AboutUs")
+                            </li>
+                            <li id="belief">
+                                @Html.ActionLink("Our Belief", "OurBelief", "AboutUs")
+                            </li>
+                            <li id="action">
+                                @Html.ActionLink("Our Actions", "OurActions", "AboutUs")
+                            </li>
                             <li id="faq">
-                                @Html.ActionLink("FAQ", "Faq", "Other")
+                                @Html.ActionLink("FAQ", "FAQ", "AboutUs")
                             </li>
-                            
-                            
+                            <li id="contact">
+                                @Html.ActionLink("Contact", "Contact", "AboutUs")
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="participate" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Participate <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li id="essayguidelines">
+                                @Html.ActionLink("Essay Submission Guidelines", "EssaySubmissionGuidelines", "Participate")
+                            </li>
+                            <li id="videoguidelines">
+                                @Html.ActionLink("Video Submission Guidelines", "VideoSubmissionGuidelines", "Participate")
+                            </li>
+                            <li id="podcastguidelines">
+                                @Html.ActionLink("Podcast Submission Guidelines", "PodcastSubmissionGuidelines", "Participate")
+                            </li>
+                            <li id="copyrightinfo">
+                                @Html.ActionLink("Copyright Info", "CopyrightInfo", "Participate")
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="donate" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Donate <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li id="donate">
+                                @Html.ActionLink("Make a Donation", "Donate", "Donate")
+                            </li>
+                            <li id="friends">
+                                @Html.ActionLink("Friends of This I Do for Change", "Friends", "Donate")
+                            </li>
+                            <li id="sponsor">
+                                @Html.ActionLink("Become a Sponsor", "BecomeSponsor", "Donate")
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -93,7 +114,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Company 2013</p>
+                    <p>Copyright &copy; @DateTime.Now.Year | This I Do for Change, Inc. | All rights reserved.</p>
                 </div>
             </div>
         </footer>
